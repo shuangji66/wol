@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 min-h-screen p-4 md:p-6;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-xl shadow-glass;
+  }
+  .glass-modal {
+    @apply bg-white border border-slate-200/60 rounded-2xl shadow-modal;
+  }
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 transition-all duration-200 shadow-sm hover:shadow-primary-500/20;
+  }
+  .btn-secondary {
+    @apply bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition-all duration-200;
+  }
+  .btn-danger {
+    @apply bg-danger text-white hover:bg-red-600 transition-all duration-200;
+  }
+  .btn-purple {
+    @apply bg-purple-500 text-white hover:bg-purple-600 transition-all duration-200;
+  }
+  .status-dot {
+    @apply inline-block w-2 h-2 rounded-full mr-1.5;
+  }
+  .status-online {
+    @apply bg-success;
+  }
+  .status-offline {
+    @apply bg-slate-300;
+  }
+  .tag {
+    @apply inline-block text-xs font-medium px-2 py-0.5 rounded-md bg-purple-100 text-purple-700;
+  }
+}
